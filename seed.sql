@@ -218,6 +218,33 @@ SELECT id, 'Hot', 0 FROM products;
 INSERT INTO product_variants (product_id, variant_name, add_price)
 SELECT id, 'Ice', 2000 FROM products;
 
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Less Ice', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'No Ice', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Extra Ice', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Warm', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Blended', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Frozen', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Double Shot', 2000 FROM products;
+
+INSERT INTO product_variants (product_id, variant_name, add_price)
+SELECT id, 'Decaf', 2000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'Small', 1000 FROM products;
+
 INSERT INTO product_sizes (product_id, size_name, add_price)
 SELECT id, 'Regular', 0 FROM products;
 
@@ -226,6 +253,24 @@ SELECT id, 'Medium', 3000 FROM products;
 
 INSERT INTO product_sizes (product_id, size_name, add_price)
 SELECT id, 'Large', 5000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'Extra Large', 7000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'Jumbo', 7000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'Mini', -1000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'Big', 5000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'King', 5000 FROM products;
+
+INSERT INTO product_sizes (product_id, size_name, add_price)
+SELECT id, 'Max', 5000 FROM products;
 
 INSERT INTO product_images (product_id, path) VALUES
 (1,'americano.jpg'),
