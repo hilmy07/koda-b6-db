@@ -1,4 +1,4 @@
-CREATE TABLE users (
+CREATE TABLE users_coffee (
     id SERIAL PRIMARY KEY,
     fullname VARCHAR(100),
     email VARCHAR(100) UNIQUE,
@@ -53,7 +53,7 @@ CREATE TABLE product_discounts (
 CREATE TABLE product_reviews (
     id SERIAL PRIMARY KEY,
     product_id INT REFERENCES products(id) ON DELETE CASCADE,
-    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    user_id INT REFERENCES users_coffee(id) ON DELETE CASCADE,
     message TEXT,
     rating INT CHECK (rating BETWEEN 1 AND 5),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -61,7 +61,7 @@ CREATE TABLE product_reviews (
 
 CREATE TABLE carts (
     id SERIAL PRIMARY KEY,
-    user_id INT UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+    user_id INT UNIQUE REFERENCES users_coffee(id) ON DELETE CASCADE,
     total_price DECIMAL(12,2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -79,7 +79,7 @@ CREATE TABLE cart_items (
 
 CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    user_id INT REFERENCES users_coffee(id) ON DELETE CASCADE,
     transaction_code VARCHAR(100),
     delivery_method VARCHAR(100),
     fullname VARCHAR(100),
